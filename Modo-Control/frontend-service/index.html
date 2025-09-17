@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>app</title>
+</head>
+<body>
+    <header id="head">
+        <div id="logo" class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+    </header>
+    <main>
+        <section id="section" class="orders-section">
+                 <div class="title">
+                    <h3>Meus Serviços</h3>
+                </div>
+                <!-- PESQUISAR PEDIDOS -->
+                <div class="search-orders">
+                    <input type="text" class="search-input" placeholder="faça sua pesquisa">
+                    <img src="img/search.png" id="search" class="search" alt="">
+                </div>
+                <!-- EXIBIÇÃO DO PEDIDO ADICIONADO -->
+                <div class="showing-orders">
+                  
+                </div>
+                 <!-- CONTAINER PARA EXIBIR OS DETALHES DO PEDIDO -->
+                 <div class="see-more-container" style="display: none;">
+                </div>
+
+                <!-- FORMS PARA CRIAR PEDIDO -->
+                <div id="add-box" class="add-box">
+                    <div class="add-container">
+                         <h1>Adionando Pedido</h1>
+                         <p class="close" alt="fechar">X</p>
+                    </div>
+                     <form action="" method="post">
+                        <label for="">Data:</label>
+                        <input type="text" class="date" id="date" name="date" placeholder="dd/mm/aa">
+                        <label for="">CLIENTE:</label>
+                        <input type="text" class="client" id="client" name="client" placeholder="digite o cliente...">
+                        <label for="">SERVIÇO:</label>
+                        <input type="text" class="service" id="service" name="service" placeholder="digite o serviço...">
+                        <label for="">QUANTIDADE:</label>
+                        <input type="text" class="quantity" id="quantity" name="quantity" placeholder="digite a quantidade...">
+                        <label for="">VALOR:</label>
+                        <input type="text" class="value" id="value" name="value" placeholder="digite o valor...">
+                        <label for="">SITUAÇÃO:</label>
+                        <select name="paid" class="paid" id="paid">
+                            <option value="">selecione uma opção</option>
+                            <option value="true">pago</option>
+                            <option value="false">não pago</option>
+                        </select>
+                        <label for="">Observação:</label>
+                        <input type="text" class="obs" id="obs" name="obs" placeholder="escreva uma observação...">
+                        <button>adicionar</button>
+                    </form>
+                    <p class="warning">Preencha os campos obrigatórios *</p>
+                </div>
+
+            <!-- FORMS PARA ATUALIZAR PEDIDO -->
+             <div class="update-box" style="display:none;">
+                <div class="update-container">
+                         <h1>Atualizando Pedido</h1>
+                         <p class="close-btn" alt="fechar">X</p>
+                    </div>
+                     <form action="">
+                        <label for="">Data:</label>
+                        <input type="text" class="date" id="date" name="date" placeholder="dd/mm/aa">
+                        <label for="">CLIENTE:</label>
+                        <input type="text" class="client" id="client" name="client" placeholder="digite o cliente...">
+                        <label for="">SERVIÇO:</label>
+                        <input type="text" class="service" id="service" name="service" placeholder="digite o serviço...">
+                        <label for="">QUANTIDADE:</label>
+                        <input type="text" class="quantity" id="quantity" name="quantity" placeholder="digite a quantidade...">
+                        <label for="">VALOR:</label>
+                        <input type="text" class="value" id="value" name="value" placeholder="digite o valor...">
+                        <label for="">SITUAÇÃO:</label>
+                        <select name="paid" class="paid" id="paid">
+                            <option value="">selecione uma opção</option>
+                            <option value="true">pago</option>
+                            <option value="false">não pago</option>
+                        </select>
+                        <label for="">Observação:</label>
+                        <input type="text" class="obs" id="obs" name="obs" placeholder="escreva uma observação...">
+                        <button>Atualizar</button>
+                    </form>
+                </div>
+             </div>
+
+        </section>
+        
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <section id="navigation" class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img src="img/home.png" alt=""></a></li>
+                    <li><button class="add"><img src="img/add.png" alt=""></button></li>
+                    <li><a href="insight.html"><img src="img/finance.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <script src="script.js" defer ></script>
+</body>
+</html>
