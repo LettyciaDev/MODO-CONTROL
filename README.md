@@ -31,8 +31,6 @@ O sistema oferece as seguintes funcionalidades principais:
   * **JavaScript (ES6+)**: Lógica da aplicação, responsável por interagir com a API e manipular o DOM.
   * **Fetch API**: Para realizar as requisições HTTP ao back-end.
 
-Perfeito 🙌 você já tem a estrutura organizada e até o front e back separados. Vou adaptar as instruções de execução com base exatamente no que aparece na sua pasta `Modo-Control`.
-
 ---
 
 # 🛠️ Como Executar o Projeto
