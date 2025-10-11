@@ -21,7 +21,7 @@ header{
 
 .logo{
     height: 50%;
-    margin-top: 5%;
+    margin: 5% 0;
     width: 95%;
 }
 
@@ -38,7 +38,7 @@ header{
 }
 .forms {
   background-color: white;
-  padding: 40px;
+  padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
   width: 50%; /* Largura fixa do formulário */
@@ -47,7 +47,7 @@ header{
 
 /* Estilos para o título */
 h1 {
-  color: #333;
+  color: var(--main-color);
   margin-bottom: 25px;
 }
 
@@ -80,7 +80,8 @@ input[type="password"] {
 /* Estilos para o botão de envio */
 button {
   padding: 12px;
-  background-color: #007bff;
+  background-color: #033e8b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   color: white;
   border: none;
   border-radius: 6px;
