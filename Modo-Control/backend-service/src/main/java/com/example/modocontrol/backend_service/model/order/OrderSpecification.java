@@ -1,4 +1,4 @@
-package com.example.modocontrol.backend_service.model;
+package com.example.modocontrol.backend_service.model.order;
 import org.springframework.data.jpa.domain.Specification;
 
 public class OrderSpecification {

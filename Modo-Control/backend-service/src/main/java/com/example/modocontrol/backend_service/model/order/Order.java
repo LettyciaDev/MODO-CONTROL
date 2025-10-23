@@ -1,11 +1,12 @@
-package com.example.modocontrol.backend_service.model;
+package com.example.modocontrol.backend_service.model.order;
 
 import java.time.Instant;
 import org.springframework.beans.BeanUtils;
 
+import com.example.modocontrol.backend_service.model.order.DTO.OrderDto;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
-import com.example.modocontrol.backend_service.model.DTO.OrderDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +14,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @Entity // sinaliza ao banco de dados que esta classe é uma entidade
-@Table(name="orders")
+@Table(name="order")
 public class Order {
     @Id // gera o Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

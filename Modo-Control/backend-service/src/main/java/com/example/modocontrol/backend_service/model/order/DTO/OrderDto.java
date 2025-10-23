@@ -1,9 +1,10 @@
-package com.example.modocontrol.backend_service.model.DTO;
+package com.example.modocontrol.backend_service.model.order.DTO;
 
 import java.time.Instant;
 import org.springframework.beans.BeanUtils;
 
-import com.example.modocontrol.backend_service.model.Order;
+import com.example.modocontrol.backend_service.model.order.Order;
+
 import lombok.*;
 
 @Getter
