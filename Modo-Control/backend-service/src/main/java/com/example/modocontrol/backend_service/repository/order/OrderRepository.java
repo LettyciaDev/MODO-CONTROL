@@ -1,4 +1,4 @@
-package com.example.modocontrol.backend_service.repository;
+package com.example.modocontrol.backend_service.repository.order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

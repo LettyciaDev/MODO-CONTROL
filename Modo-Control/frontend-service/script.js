@@ -1,3 +1,40 @@
+// VARIAVEIS - LOGIN
+const txtNameUser = document.querySelector('#nameUser');
+const txtEmail = document.querySelector('#email');
+const txtPassword = document.querySelector('#password');
+
+function enterLogin() {
+    const userData = {
+        clientName: txtNameUser.value,
+        email: txtEmail.value,
+        password: txtPassword.value
+    }
+
+    if(!userData.clientName || !userData.email || !userData.password) {
+        checkWarning.style.display = 'block';
+        return; 
+    }
+
+    checkWarning.style.display = 'none'; // Esconde o aviso se a validação passar
+        
+
+    fetch("http://localhost/auth/login") ,
+        {
+            headers: {
+                'Accept': 'application.json',
+                'Content-Type': 'application/json'
+            },
+
+            method:"POST",
+            body: JSON.stringify(userData)
+        } .catch(function (res) { 
+            alert("Ocorreu um erro ao logar. Tente novamente.");
+            console.log(res)
+        }) 
+
+
+}
+
 // VARIAVEIS - ADICIONAR PEDIDO
 const addButton = document.querySelector('.add');
 const addBox = document.querySelector('.add-box');

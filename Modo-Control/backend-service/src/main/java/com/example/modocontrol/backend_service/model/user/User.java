@@ -24,7 +24,7 @@ import lombok.Setter;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @NotBlank
     @Column(name="role", nullable = false)
@@ -38,13 +38,20 @@ public class User implements UserDetails {
     @Size(min = 3, max = 70)
     @NotBlank
     @Column(name="email", unique= true, nullable = false)
-    private String email;
+    private String login;
 
     @Size(min = 3, max = 40)
     @NotBlank
     @Column(name="password", nullable = false)
     private String password;
 
+    public User(String login, String password, UserRole role){
+        this.login = login;
+        this.password = password;
+        this.role = role;
+
+    }
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
        if(this.role == UserRole.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
@@ -53,8 +60,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        // TODO Auto-generated method stub
-        return this.email;
+        return this.login;
     }
 
 

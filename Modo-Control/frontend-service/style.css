@@ -7,21 +7,49 @@ body{
     background-color:#002960;
     box-sizing: border-box;
     margin: 0;
+    min-height: 100vh; /* Faz com que o body ocupe a altura total da tela */
+    display: flex; /* Habilita o Flexbox */
+    flex-direction: column; /* Coloca header, main, etc. em coluna */
+    margin: 0; /* Remove margens padrão */
+    overflow: hidden;
+    position: relative;
+
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            rgba(255,255,255,0.03) 0px,
+            rgba(255,255,255,0.00) 60px
+        );
+    background-size: 300% 300%;
+    animation: lightMove 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes lightMove {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
 
 :root{
     --main-color: #002960;
     --main-font: "League Spartan", sans-serif;;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-}
 
 .logo{
-    height: 50%;
-    margin: 5% 0;
+    height: auto;
+    margin: 2% 0;
     width: 95%;
 }
 
@@ -35,13 +63,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 60vh;
 }
 .forms {
   background-color: white;
-  padding: 20px 40px;
+  padding: 20px 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-  width: 50%; /* Largura fixa do formulário */
+  box-shadow: 2 10px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  width: 50%; 
+  max-width: 90%;
   text-align: center;
 }
 
@@ -70,25 +100,30 @@ p {
 input[type="text"],
 input[type="password"] {
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
   font-size: 16px;
   width: 100%;
   box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+  box-shadow: 0 1px 8px #1111; /* Sombra suave para profundidade */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 /* Estilos para o botão de envio */
 button {
   padding: 12px;
-  background-color: #033e8b;
+  background-color: #002960;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-family: var(--main-font);
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Transição suave na cor */
+  width: 50%;
+  margin: 5% 25%;
 }
 
 /* Efeito ao passar o mouse sobre o botão */

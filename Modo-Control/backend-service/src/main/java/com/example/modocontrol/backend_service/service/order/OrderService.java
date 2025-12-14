@@ -1,8 +1,8 @@
-package com.example.modocontrol.backend_service.service;
+package com.example.modocontrol.backend_service.service.order;
 
-import com.example.modocontrol.backend_service.repository.OrderRepository;
 import com.example.modocontrol.backend_service.model.order.Order;
 import com.example.modocontrol.backend_service.model.order.DTO.OrderDto;
+import com.example.modocontrol.backend_service.repository.order.OrderRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
