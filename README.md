@@ -1,4 +1,4 @@
-# Modo-Control
+# MODO-CONTROL
 -----
 
 # Projeto de Controle de Pedidos
