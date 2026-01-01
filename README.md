@@ -44,7 +44,7 @@ Siga os passos abaixo para rodar o **Back-end (Spring Boot)** e o **Front-end (H
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/LettyciaDev/Modo-Control.git
+   git clone https://github.com/LettyciaDev/MODO-CONTROL.git
    cd Modo-Control/backend-service
    ```
 
